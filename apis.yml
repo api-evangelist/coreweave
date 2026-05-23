@@ -1,0 +1,171 @@
+aid: coreweave
+name: CoreWeave
+description: CoreWeave is a specialized GPU cloud purpose-built for AI workloads, offering managed Kubernetes
+  (CKS), Slurm-on-Kubernetes (SUNK), dedicated and serverless inference, AI Object Storage, distributed VAST
+  file storage, HPC InfiniBand interconnect, and a Sandbox product. CoreWeave's control plane is Kubernetes-native
+  and exposes APIs for CKS clusters, Inference deployments and gateways, VPCs, Object Storage, and Sandbox
+  control.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+type: Index
+access: 3rd-Party
+position: Producer
+tags:
+- AI
+- Cloud
+- GPU
+- HPC
+- Inference
+- Kubernetes
+- Machine Learning
+- Storage
+apis:
+- aid: coreweave:cks-api
+  name: CoreWeave Kubernetes Service API
+  description: The CKS API provisions and manages CoreWeave Kubernetes Service clusters and node pools on
+    bare-metal GPU and CPU hardware. It exposes operations for cluster lifecycle, node pool configuration,
+    and hardware-aware scheduling for training, inference, and HPC workloads.
+  humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
+  tags:
+  - Bare Metal
+  - Clusters
+  - GPU
+  - Kubernetes
+  - Node Pools
+  properties:
+  - type: Documentation
+    url: https://docs.coreweave.com/products/cks/reference/cks-api
+  - type: Reference
+    url: https://docs.coreweave.com/products/cks/reference/node-pool
+- aid: coreweave:inference-api
+  name: CoreWeave Inference API
+  description: The CoreWeave Inference API manages Deployments, Gateways, and Capacity Claims for serverless
+    and dedicated AI inference. It is used to create, update, and route to managed model deployments backed
+    by CoreWeave's GPU fleet.
+  humanURL: https://docs.coreweave.com/products/inference/reference/api-overview
+  tags:
+  - AI
+  - Deployments
+  - Gateways
+  - Inference
+  - Models
+  properties:
+  - type: Documentation
+    url: https://docs.coreweave.com/products/inference/reference/api-overview
+  - type: Reference
+    url: https://docs.coreweave.com/products/inference/reference/deploymentservice/create-deployment
+  - type: Reference
+    url: https://docs.coreweave.com/products/inference/reference/gatewayservice/create-gateway
+  - type: Reference
+    url: https://docs.coreweave.com/products/inference/reference/capacityclaimservice/create-capacity-claim
+- aid: coreweave:vpc-api
+  name: CoreWeave VPC API
+  description: The VPC API creates and manages Virtual Private Clouds on CoreWeave, including network configuration,
+    routing, and isolation for CKS clusters and other compute resources.
+  humanURL: https://docs.coreweave.com/products/networking/vpc/vpc-api
+  tags:
+  - Networking
+  - Routing
+  - VPC
+  properties:
+  - type: Documentation
+    url: https://docs.coreweave.com/products/networking/vpc/vpc-api
+  - type: Reference
+    url: https://docs.coreweave.com/products/networking/vpc/vpc-api/vpcservice/create-vpc
+- aid: coreweave:object-storage-api
+  name: CoreWeave AI Object Storage API
+  description: CoreWeave AI Object Storage (CAIOS) is an S3-compatible object storage service optimized for
+    AI dataset and model storage. It supports standard S3 operations alongside CoreWeave-specific bucket
+    and access controls.
+  humanURL: https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-api-ref
+  tags:
+  - AI
+  - Buckets
+  - Datasets
+  - Object Storage
+  - S3
+  properties:
+  - type: Documentation
+    url: https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-api-ref
+  - type: Reference
+    url: https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-s3
+- aid: coreweave:sandbox-api
+  name: CoreWeave Sandbox Control Plane API
+  description: The Sandbox Control Plane API provisions ephemeral compute sandboxes for short-lived, isolated
+    workloads on CoreWeave infrastructure.
+  humanURL: https://docs.coreweave.com/products/sandboxes/reference/control-plane-api
+  tags:
+  - Compute
+  - Ephemeral
+  - Sandbox
+  properties:
+  - type: Documentation
+    url: https://docs.coreweave.com/products/sandboxes/reference/control-plane-api
+common:
+- type: Website
+  url: https://www.coreweave.com
+- type: Developer
+  url: https://docs.coreweave.com
+- type: Documentation
+  url: https://docs.coreweave.com
+- type: Portal
+  url: https://cloud.coreweave.com
+- type: Pricing
+  url: https://www.coreweave.com/pricing
+- type: Blog
+  url: https://www.coreweave.com/blog
+- type: GitHubOrganization
+  url: https://github.com/coreweave
+- type: StatusPage
+  url: https://status.coreweave.com
+- type: TermsOfService
+  url: https://www.coreweave.com/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.coreweave.com/legal/privacy-policy
+- type: Support
+  url: https://www.coreweave.com/contact
+- type: LinkedIn
+  url: https://www.linkedin.com/company/coreweave
+- name: CoreWeave Terraform Provider
+  url: https://docs.coreweave.com/platform/terraform
+  type: Terraform
+- name: Tensorizer
+  url: https://github.com/coreweave/tensorizer
+  type: SDK
+- name: Kubernetes Cloud Examples
+  url: https://github.com/coreweave/kubernetes-cloud
+  type: Samples
+- type: Features
+  data:
+  - name: CoreWeave Kubernetes Service (CKS)
+    description: Managed Kubernetes on bare-metal GPU and CPU nodes for training, inference, and HPC.
+  - name: SUNK
+    description: Slurm running on Kubernetes for batch and burst training workloads alongside K8s services.
+  - name: CoreWeave Inference
+    description: Dedicated and serverless inference offerings with managed deployments, gateways, and capacity
+      claims.
+  - name: AI Object Storage
+    description: S3-compatible object storage purpose-built for AI dataset and model workloads.
+  - name: Dedicated VAST Storage
+    description: High-performance VAST Data file storage for large-scale training pipelines.
+  - name: HPC Interconnect
+    description: InfiniBand-based HPC fabric with GPUDirect RDMA for multi-node training.
+  - name: CoreWeave Sandbox
+    description: Ephemeral compute sandboxes for short-lived, isolated workloads.
+- type: Integrations
+  data:
+  - name: Kubernetes
+    description: Native Kubernetes API surface across CKS clusters with standard kubectl and Helm workflows.
+  - name: Slurm
+    description: Slurm workload manager integrated with Kubernetes through SUNK.
+  - name: Terraform
+    description: Official CoreWeave Terraform provider for CKS clusters, VPCs, and object storage buckets.
+  - name: NVIDIA GPU Operator
+    description: NVIDIA GPU Operator and InfiniBand fabric integration for accelerated workloads.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
