@@ -165,6 +165,8 @@ common:
     description: Official CoreWeave Terraform provider for CKS clusters, VPCs, and object storage buckets.
   - name: NVIDIA GPU Operator
     description: NVIDIA GPU Operator and InfiniBand fabric integration for accelerated workloads.
+- type: LLMsTxt
+  url: https://docs.coreweave.com/llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
