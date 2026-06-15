@@ -1,0 +1,111 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "CoreWeave Kubernetes Service (CKS) API",
+    "version": "v1beta1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Clusters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all clusters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.coreweave.com/v1beta1/cks/clusters"
+          },
+          "docs": "List all clusters"
+        },
+        {
+          "info": {
+            "name": "Create a cluster",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.coreweave.com/v1beta1/cks/clusters",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a cluster"
+        },
+        {
+          "info": {
+            "name": "Get a cluster's information by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.coreweave.com/v1beta1/cks/clusters/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The cluster identifier."
+              }
+            ]
+          },
+          "docs": "Get a cluster's information by ID"
+        },
+        {
+          "info": {
+            "name": "Update a cluster's configuration by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.coreweave.com/v1beta1/cks/clusters/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The cluster identifier."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a cluster's configuration by ID"
+        },
+        {
+          "info": {
+            "name": "Delete a cluster by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.coreweave.com/v1beta1/cks/clusters/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The cluster identifier."
+              }
+            ]
+          },
+          "docs": "Delete a cluster by ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
