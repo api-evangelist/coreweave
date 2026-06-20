@@ -5,7 +5,7 @@ description: CoreWeave is a specialized GPU cloud purpose-built for AI workloads
   file storage, HPC InfiniBand interconnect, and a Sandbox product. CoreWeave's control plane is Kubernetes-native
   and exposes APIs for CKS clusters, Inference deployments and gateways, VPCs, Object Storage, and Sandbox
   control.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
