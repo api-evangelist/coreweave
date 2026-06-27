@@ -134,7 +134,7 @@ common:
   type: Terraform
 - name: Tensorizer
   url: https://github.com/coreweave/tensorizer
-  type: SDK
+  type: SDKs
 - name: Kubernetes Cloud Examples
   url: https://github.com/coreweave/kubernetes-cloud
   type: Samples
@@ -165,7 +165,7 @@ common:
     description: Official CoreWeave Terraform provider for CKS clusters, VPCs, and object storage buckets.
   - name: NVIDIA GPU Operator
     description: NVIDIA GPU Operator and InfiniBand fabric integration for accelerated workloads.
-- type: LLMsTxt
+- type: LlmsText
   url: https://docs.coreweave.com/llms.txt
 maintainers:
 - FN: Kin Lane
