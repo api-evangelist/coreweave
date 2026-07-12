@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/coreweave-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: API Access Token
+  description: |-
+    Provide a CoreWeave API access token using the `Authorization: Bearer
+    {API_ACCESS_TOKEN}` header.
+  sources:
+  - openapi/coreweave-openapi.yml

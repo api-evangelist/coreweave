@@ -105,6 +105,12 @@ apis:
   - type: Documentation
     url: https://docs.coreweave.com/products/sandboxes/reference/control-plane-api
 common:
+- type: TrustCenter
+  url: security/coreweave-trust-center.yml
+- type: DomainSecurity
+  url: security/coreweave-domain-security.yml
+- type: Authentication
+  url: authentication/coreweave-authentication.yml
 - type: Website
   url: https://www.coreweave.com
 - type: Developer
