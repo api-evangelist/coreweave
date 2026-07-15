@@ -105,6 +105,8 @@ apis:
   - type: Documentation
     url: https://docs.coreweave.com/products/sandboxes/reference/control-plane-api
 common:
+- type: AgenticAccess
+  url: agentic-access/coreweave-agentic-access.yml
 - type: TrustCenter
   url: security/coreweave-trust-center.yml
 - type: DomainSecurity
