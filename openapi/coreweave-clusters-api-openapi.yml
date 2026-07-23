@@ -1,27 +1,32 @@
 openapi: 3.1.0
 info:
-  title: CoreWeave Kubernetes Service (CKS) API
-  description: |
-    The CoreWeave CKS API provisions and manages CoreWeave Kubernetes Service
+  title: CoreWeave Kubernetes Service (CKS) Clusters API
+  description: 'The CoreWeave CKS API provisions and manages CoreWeave Kubernetes Service
+
     clusters and node pools on bare-metal GPU and CPU hardware. Endpoints
+
     cover cluster lifecycle operations: list, create, retrieve, update, and
+
     delete clusters.
+
+    '
   version: v1beta1
   contact:
     name: CoreWeave
     url: https://docs.coreweave.com
 servers:
-  - url: https://api.coreweave.com
-    description: CoreWeave control plane
+- url: https://api.coreweave.com
+  description: CoreWeave control plane
 security:
-  - BearerAuth: []
+- BearerAuth: []
 tags:
-  - name: Clusters
-    description: CKS cluster lifecycle operations
+- name: Clusters
+  description: CKS cluster lifecycle operations
 paths:
   /v1beta1/cks/clusters:
     get:
-      tags: [Clusters]
+      tags:
+      - Clusters
       summary: List all clusters
       operationId: listClusters
       responses:
@@ -37,7 +42,8 @@ paths:
                     items:
                       $ref: '#/components/schemas/Cluster'
     post:
-      tags: [Clusters]
+      tags:
+      - Clusters
       summary: Create a cluster
       operationId: createCluster
       requestBody:
@@ -55,14 +61,15 @@ paths:
                 $ref: '#/components/schemas/Cluster'
   /v1beta1/cks/clusters/{id}:
     parameters:
-      - in: path
-        name: id
-        required: true
-        schema:
-          type: string
-        description: The cluster identifier.
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+      description: The cluster identifier.
     get:
-      tags: [Clusters]
+      tags:
+      - Clusters
       summary: Get a cluster's information by ID
       operationId: getCluster
       responses:
@@ -73,7 +80,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Cluster'
     patch:
-      tags: [Clusters]
+      tags:
+      - Clusters
       summary: Update a cluster's configuration by ID
       operationId: updateCluster
       requestBody:
@@ -90,21 +98,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/Cluster'
     delete:
-      tags: [Clusters]
+      tags:
+      - Clusters
       summary: Delete a cluster by ID
       operationId: deleteCluster
       responses:
         '204':
           description: Cluster deleted.
 components:
-  securitySchemes:
-    BearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: API Access Token
-      description: |
-        Provide a CoreWeave API access token using the `Authorization: Bearer
-        {API_ACCESS_TOKEN}` header.
   schemas:
     Cluster:
       type: object
@@ -113,3 +114,13 @@ components:
           type: string
         name:
           type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Access Token
+      description: 'Provide a CoreWeave API access token using the `Authorization: Bearer
+
+        {API_ACCESS_TOKEN}` header.
+
+        '
