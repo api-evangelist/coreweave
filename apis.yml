@@ -5,7 +5,20 @@ description: CoreWeave is a specialized GPU cloud purpose-built for AI workloads
   file storage, HPC InfiniBand interconnect, and a Sandbox product. CoreWeave's control plane is Kubernetes-native
   and exposes APIs for CKS clusters, Inference deployments and gateways, VPCs, Object Storage, and Sandbox
   control.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coreweave.png
 url: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
@@ -25,9 +38,10 @@ tags:
 apis:
 - aid: coreweave:cks-api
   name: CoreWeave Kubernetes Service API
-  description: The CKS API provisions and manages CoreWeave Kubernetes Service clusters and node pools on
-    bare-metal GPU and CPU hardware. It exposes operations for cluster lifecycle, node pool configuration,
-    and hardware-aware scheduling for training, inference, and HPC workloads.
+  description: >-
+    The CKS API provisions and manages CoreWeave Kubernetes Service clusters and node pools on bare-metal
+    GPU and CPU hardware. It exposes operations for cluster lifecycle, node pool configuration, and hardware-aware
+    scheduling for training, inference, and HPC workloads.
   humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
   tags:
   - Bare Metal
@@ -42,8 +56,9 @@ apis:
     url: https://docs.coreweave.com/products/cks/reference/node-pool
 - aid: coreweave:inference-api
   name: CoreWeave Inference API
-  description: The CoreWeave Inference API manages Deployments, Gateways, and Capacity Claims for serverless
-    and dedicated AI inference. It is used to create, update, and route to managed model deployments backed
+  description: >-
+    The CoreWeave Inference API manages Deployments, Gateways, and Capacity Claims for serverless and
+    dedicated AI inference. It is used to create, update, and route to managed model deployments backed
     by CoreWeave's GPU fleet.
   humanURL: https://docs.coreweave.com/products/inference/reference/api-overview
   tags:
@@ -56,14 +71,17 @@ apis:
   - type: Documentation
     url: https://docs.coreweave.com/products/inference/reference/api-overview
   - type: Reference
-    url: https://docs.coreweave.com/products/inference/reference/deploymentservice/create-deployment
+    url: >-
+      https://docs.coreweave.com/products/inference/reference/deploymentservice/create-deployment
   - type: Reference
     url: https://docs.coreweave.com/products/inference/reference/gatewayservice/create-gateway
   - type: Reference
-    url: https://docs.coreweave.com/products/inference/reference/capacityclaimservice/create-capacity-claim
+    url: >-
+      https://docs.coreweave.com/products/inference/reference/capacityclaimservice/create-capacity-claim
 - aid: coreweave:vpc-api
   name: CoreWeave VPC API
-  description: The VPC API creates and manages Virtual Private Clouds on CoreWeave, including network configuration,
+  description: >-
+    The VPC API creates and manages Virtual Private Clouds on CoreWeave, including network configuration,
     routing, and isolation for CKS clusters and other compute resources.
   humanURL: https://docs.coreweave.com/products/networking/vpc/vpc-api
   tags:
@@ -77,10 +95,12 @@ apis:
     url: https://docs.coreweave.com/products/networking/vpc/vpc-api/vpcservice/create-vpc
 - aid: coreweave:object-storage-api
   name: CoreWeave AI Object Storage API
-  description: CoreWeave AI Object Storage (CAIOS) is an S3-compatible object storage service optimized for
-    AI dataset and model storage. It supports standard S3 operations alongside CoreWeave-specific bucket
-    and access controls.
-  humanURL: https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-api-ref
+  description: >-
+    CoreWeave AI Object Storage (CAIOS) is an S3-compatible object storage service optimized for AI dataset
+    and model storage. It supports standard S3 operations alongside CoreWeave-specific bucket and access
+    controls.
+  humanURL: >-
+    https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-api-ref
   tags:
   - AI
   - Buckets
@@ -89,13 +109,15 @@ apis:
   - S3
   properties:
   - type: Documentation
-    url: https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-api-ref
+    url: >-
+      https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-api-ref
   - type: Reference
     url: https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-s3
 - aid: coreweave:sandbox-api
   name: CoreWeave Sandbox Control Plane API
-  description: The Sandbox Control Plane API provisions ephemeral compute sandboxes for short-lived, isolated
-    workloads on CoreWeave infrastructure.
+  description: >-
+    The Sandbox Control Plane API provisions ephemeral compute sandboxes for short-lived, isolated workloads
+    on CoreWeave infrastructure.
   humanURL: https://docs.coreweave.com/products/sandboxes/reference/control-plane-api
   tags:
   - Compute
@@ -104,6 +126,15 @@ apis:
   properties:
   - type: Documentation
     url: https://docs.coreweave.com/products/sandboxes/reference/control-plane-api
+- aid: coreweave:coreweave-clusters-api
+  name: CoreWeave Clusters API
+  description: CKS cluster lifecycle operations
+  humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
+  tags:
+  - Clusters
+  properties:
+  - type: OpenAPI
+    url: openapi/coreweave-clusters-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/coreweave-agentic-access.yml
