@@ -1,0 +1,14 @@
+{
+  "provider": "coreweave",
+  "sources": [
+    "coreweave-clusters-api-openapi.yml"
+  ],
+  "outputs": [
+    "coreweave-clusters-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
