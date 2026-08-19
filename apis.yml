@@ -22,7 +22,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coreweave.
 url: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 type: Index
 access: 3rd-Party
 position: Producer
