@@ -27,6 +27,15 @@ type: Index
 access: 3rd-Party
 position: Producer
 tags:
+- Artificial Intelligence
+- Cloud
+- GPU
+- HPC
+- Inference
+- Kubernetes
+- Machine-Learning
+- Storage
+tags_raw:
 - AI
 - Cloud
 - GPU
@@ -45,6 +54,12 @@ apis:
   humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
   tags:
   - Bare Metal
+  - Cluster
+  - GPU
+  - Kubernetes
+  - Node Pools
+  tags_raw:
+  - Bare Metal
   - Clusters
   - GPU
   - Kubernetes
@@ -62,6 +77,12 @@ apis:
     by CoreWeave's GPU fleet.
   humanURL: https://docs.coreweave.com/products/inference/reference/api-overview
   tags:
+  - Artificial Intelligence
+  - Deployment
+  - Gateways
+  - Inference
+  - Models
+  tags_raw:
   - AI
   - Deployments
   - Gateways
@@ -102,6 +123,12 @@ apis:
   humanURL: >-
     https://docs.coreweave.com/products/storage/object-storage/reference/object-storage-api-ref
   tags:
+  - Artificial Intelligence
+  - Buckets
+  - Datasets
+  - Object Storage
+  - S3
+  tags_raw:
   - AI
   - Buckets
   - Datasets
@@ -131,6 +158,8 @@ apis:
   description: CKS cluster lifecycle operations
   humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
   tags:
+  - Cluster
+  tags_raw:
   - Clusters
   properties:
   - type: OpenAPI
