@@ -5,6 +5,18 @@ description: CoreWeave is a specialized GPU cloud purpose-built for AI workloads
   file storage, HPC InfiniBand interconnect, and a Sandbox product. CoreWeave's control plane is Kubernetes-native
   and exposes APIs for CKS clusters, Inference deployments and gateways, VPCs, Object Storage, and Sandbox
   control.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
