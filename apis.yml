@@ -217,7 +217,7 @@ common:
   type: SDKs
 - name: Kubernetes Cloud Examples
   url: https://github.com/coreweave/kubernetes-cloud
-  type: Samples
+  type: Examples
 - type: Features
   data:
   - name: CoreWeave Kubernetes Service (CKS)
