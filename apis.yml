@@ -177,6 +177,9 @@ apis:
   - type: OpenAPI
     url: openapi/coreweave-clusters-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/coreweave-capability-edges.yml
+  name: CoreWeave Business Capability Map
 - type: AgenticAccess
   url: agentic-access/coreweave-agentic-access.yml
 - type: TrustCenter
