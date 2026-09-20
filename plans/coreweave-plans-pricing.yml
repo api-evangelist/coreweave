@@ -1,53 +1,186 @@
-specification: API Commons Plans
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
-provider: CoreWeave
-providerId: coreweave
-created: '2026-05-22'
-modified: '2026-05-22'
-tags:
-- AI
-- Cloud
-- GPU
-- HPC
-- Inference
-- Kubernetes
-- Machine Learning
-- Storage
-description: Machine-readable plans scaffold for the CoreWeave API surface. Conforms to the API Commons Plans schema. Tier
-  limits and prices are scaffold defaults; replace with provider-published values.
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://www.coreweave.com/pricing
+sources:
+- https://www.coreweave.com/pricing
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T120546
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+published: true
+note: 'Hourly instance pricing for GPU/CPU compute plus per-GB storage and networking fees; some SKUs
+  list ''Contact sales''. Reserved capacity: ''up to 60% discounts over our On-Demand prices for committed
+  usage''. Inference single-GPU per-hour prices also listed (e.g., $10.50 for GB200).'
+plan_count: 25
+currency: USD
 plans:
-- id: coreweave-free
-  name: Free
-  type: freemium
-  description: Free entry tier for the CoreWeave API surface. Intended for evaluation, prototyping, and low-volume integrations.
-    Real limits and pricing must be reconciled with the provider's published plan documentation.
-  entries:
-  - label: API Requests
-    description: Monthly API request quota across all included endpoints
-    name: api_requests
-    type: quota
-    metric: requests
-    limit: 1000
-    timeFrame: month
-    geo: global
-    domains:
-    - https://docs.coreweave.com/products/cks/reference/cks-api
-    unit: 1
-    price: '0.00'
-    userMultiplied: false
-  - label: Rate Limit
-    description: Maximum requests per minute on the free tier
-    name: rate_limit
-    type: rate
-    metric: requests_per_minute
-    limit: 10
-    timeFrame: minute
-    geo: global
-    domains:
-    - https://docs.coreweave.com/products/cks/reference/cks-api
-    unit: 1
-    price: '0.00'
-references:
-- name: CoreWeave API Documentation
-  url: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/apis.yml
+- name: NVIDIA GB200 NVL72 (on-demand, North America)
+  price_text: $42.00
+  price: 42.0
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 4 GPUs, 186 GB VRAM, 144 vCPUs, 960 GB RAM, 30.72 TB local storage
+- name: NVIDIA HGX B200 (on-demand)
+  price_text: $68.80
+  price: 68.8
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 8 GPUs, 180 GB VRAM, 128 vCPUs, 2,048 GB RAM
+  overage: 'Spot Price: $34.11 / Hour (NA)'
+- name: NVIDIA HGX H100 (on-demand)
+  price_text: $49.24
+  price: 49.24
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 8 GPUs, 80 GB VRAM
+  overage: 'Spot Price: $19.71 / Hour (NA)'
+- name: NVIDIA HGX H200 (on-demand)
+  price_text: $50.44
+  price: 50.44
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 8 GPUs, 141 GB VRAM
+  overage: 'Spot Price: $20.93 / Hour (NA)'
+- name: NVIDIA A100 (on-demand)
+  price_text: $21.60
+  price: 21.6
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 8 GPUs, 80 GB VRAM
+  overage: Spot $9.65/hour (NA)
+- name: NVIDIA L40S (on-demand)
+  price_text: $18.00
+  price: 18.0
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 8 GPUs, 48 GB VRAM
+- name: NVIDIA L40 (on-demand)
+  price_text: $10.00
+  price: 10.0
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 8 GPUs, 48 GB VRAM
+- name: NVIDIA RTX PRO 6000 Blackwell Server Edition (High Memory)
+  price_text: $20.00
+  price: 20.0
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 8 GPUs, 96 GB VRAM
+- name: NVIDIA GH200
+  price_text: $6.50
+  price: 6.5
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 1 GPU, 96 GB VRAM
+- name: NVIDIA GB300 NVL72 / HGX B300 (on-demand)
+  price_text: Contact sales
+  period: per-use
+  unit: per hour
+  overage: 'HGX B300 Spot Price: $35.84 / Hour (NA)'
+- name: 'CPU: AMD Genoa (9274F) High Performance'
+  price_text: $6.42
+  price: 6.42
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 96 vCPUs, 768 GB RAM
+  overage: Spot $3.50 (NA)
+- name: 'CPU: AMD Genoa (9454) General Purpose'
+  price_text: $7.78
+  price: 7.78
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 192 vCPUs, 1,536 GB RAM
+  overage: Spot $3.32 (NA)
+- name: 'CPU: Intel Ice Lake (6342) General Purpose'
+  price_text: $3.36
+  price: 3.36
+  currency: USD
+  period: per-use
+  unit: per hour
+  included_quota: 96 vCPUs, 384 GB RAM
+  overage: Spot $2.29 (NA)
+- name: AI Object Storage Hot
+  price_text: $0.06/GB/mo
+  price: 0.06
+  currency: USD
+  period: month
+  unit: GB
+- name: AI Object Storage Warm
+  price_text: $0.03/GB/mo
+  price: 0.03
+  currency: USD
+  period: month
+  unit: GB
+- name: AI Object Storage Cold
+  price_text: $0.015/GB/mo
+  price: 0.015
+  currency: USD
+  period: month
+  unit: GB
+- name: AI Object Storage Archive
+  price_text: $0.0125/GB/mo
+  price: 0.0125
+  currency: USD
+  period: month
+  unit: GB
+  included_quota: Limited Availability, Contact CoreWeave
+- name: Distributed File Storage
+  price_text: $0.070/GB/mo
+  price: 0.07
+  currency: USD
+  period: month
+  unit: GB
+- name: Egress and IOPS
+  price_text: Free
+  period: none
+- name: Public IP Address
+  price_text: $4.00 per IP / month
+  price: 4.0
+  currency: USD
+  period: month
+  unit: per IP
+- name: Bring Your Own IP
+  price_text: $4.00 one-time setup fee per IP
+  price: 4.0
+  currency: USD
+  period: one-time
+  unit: per IP
+- name: Direct Connect 400G Dedicated
+  price_text: $50,000
+  price: 50000
+  currency: USD
+  period: month
+  unit: DX 400G
+  overage: 'Virtual DX: Not Available'
+- name: Direct Connect 100G Dedicated
+  price_text: $12,500
+  price: 12500
+  currency: USD
+  period: month
+  unit: DX 100G
+  overage: 'Virtual DX: Not Available'
+- name: Direct Connect 10G Dedicated
+  price_text: $1,250
+  price: 1250
+  currency: USD
+  period: month
+  unit: DX 10G
+  overage: 'Virtual DX 10G: $1,500'
+- name: CoreWeave Kubernetes Service Control Plane / SUNK
+  price_text: Free
+  period: none
+  included_quota: '*Excludes CPU Resource Usage required to operate SUNK'
