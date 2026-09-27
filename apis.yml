@@ -39,6 +39,9 @@ specificationVersion: '0.23'
 type: Index
 access: 3rd-Party
 position: Producing
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-24
 tags:
 - Artificial Intelligence
 - Cloud
@@ -46,8 +49,9 @@ tags:
 - HPC
 - Inference
 - Kubernetes
-- Machine-Learning
+- Machine Learning
 - Storage
+- Data Center
 tags_raw:
 - AI
 - Cloud
@@ -57,6 +61,8 @@ tags_raw:
 - Kubernetes
 - Machine Learning
 - Storage
+- Machine-Learning
+- Data Center
 apis:
 - aid: coreweave:cks-api
   name: CoreWeave Kubernetes Service API
