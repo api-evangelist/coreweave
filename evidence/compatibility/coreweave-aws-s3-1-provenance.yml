@@ -1,0 +1,12 @@
+fetched: '2026-10-13'
+method: fetched
+source: https://docs.coreweave.com/docs/products/storage/object-storage
+page: https://docs.coreweave.com/docs/products/storage/object-storage
+file: coreweave-aws-s3-1.md
+bytes: 1885
+sha256: ab012c3ee2d2a6a6fe070c551e9314aa0ff53c706b3942599d32cec3e7286d79
+anchor: amazon-web-services
+shape: aws-s3
+classification: declares-compatibility
+quote: Purpose-built, S3-compatible object storage for AI training data, checkpoints, and model weights
+note: text extracted from the provider's own page (tags stripped), saved for evidence
