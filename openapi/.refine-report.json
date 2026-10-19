@@ -1,20 +1,30 @@
 {
   "provider": "coreweave",
   "sources": [
-    "_original/coreweave-openapi.yml"
+    "_original/coreweave-openapi.json"
   ],
   "outputs": [
-    "coreweave-clusters-api-openapi.yml"
+    "coreweave-freshdesk-api-openapi.yml",
+    "coreweave-healthz-api-openapi.yml",
+    "coreweave-reconcile-api-openapi.yml",
+    "coreweave-webhooks-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
-    "coreweave-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "coreweave-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "coreweave-openapi.json: tagged paths POST /reconcile -> Reconcile",
+    "coreweave-openapi.json: tagged paths POST /webhooks/chargify -> Webhooks",
+    "coreweave-openapi.json: tagged paths POST /webhooks/sift -> Webhooks",
+    "coreweave-openapi.json: tagged paths GET /freshdesk/auth -> Freshdesk",
+    "coreweave-openapi.json: tagged paths GET /healthz -> Healthz",
+    "coreweave-openapi.json: declared missing tag: Freshdesk",
+    "coreweave-openapi.json: declared missing tag: Healthz",
+    "coreweave-openapi.json: declared missing tag: Reconcile",
+    "coreweave-openapi.json: declared missing tag: Webhooks",
+    "apis.yml register: written (+4 apis, 9 total)"
   ],
-  "skipped": [
-    "coreweave-clusters-api-openapi.yml: previously refined output, superseded by openapi/_original/"
-  ]
+  "skipped": []
 }

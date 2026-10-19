@@ -1,0 +1,29 @@
+openapi: 3.2.0
+info:
+  title: Fast Freshdesk API
+  version: 0.1.0
+tags:
+- name: Freshdesk
+paths:
+  /freshdesk/auth:
+    get:
+      summary: Freshdesk Jwt Sso Login
+      description: 'Uses an authenticated user''s cloud-app identity to log them into their
+
+        respective Freshdesk account. Freshdesk will provision an account
+
+        automatically if the subject (uniquely identified by the email in the JWT)
+
+        does not exist.
+
+
+        https://support.freshworks.com/en/support/solutions/articles/50000000670'
+      operationId: freshdesk_jwt_sso_login_freshdesk_auth_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Freshdesk

@@ -1,0 +1,20 @@
+openapi: 3.2.0
+info:
+  title: Fast Healthz API
+  version: 0.1.0
+tags:
+- name: Healthz
+paths:
+  /healthz:
+    get:
+      summary: Healthz
+      description: Responds 200 for k8s readiness/liveness probes.
+      operationId: healthz_healthz_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Healthz

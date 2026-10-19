@@ -1,0 +1,31 @@
+openapi: 3.2.0
+info:
+  title: Fast Webhooks API
+  version: 0.1.0
+tags:
+- name: Webhooks
+paths:
+  /webhooks/chargify:
+    post:
+      summary: Recv Webhooks Chargify
+      operationId: recv_webhooks_chargify_webhooks_chargify_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Webhooks
+  /webhooks/sift:
+    post:
+      summary: Recv Webhooks Sift
+      operationId: recv_webhooks_sift_webhooks_sift_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+      tags:
+      - Webhooks

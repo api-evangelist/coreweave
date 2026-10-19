@@ -172,17 +172,42 @@ apis:
   properties:
   - type: Documentation
     url: https://docs.coreweave.com/products/sandboxes/reference/control-plane-api
-- aid: coreweave:coreweave-clusters-api
-  name: CoreWeave Clusters API
-  description: CKS cluster lifecycle operations
+- aid: coreweave:coreweave-freshdesk-api
+  name: CoreWeave Freshdesk API
+  description: The Freshdesk API from CoreWeave — 1 operation(s) for freshdesk.
   humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
   tags:
-  - Cluster
-  tags_raw:
-  - Clusters
+  - Freshdesk
   properties:
   - type: OpenAPI
-    url: openapi/coreweave-clusters-api-openapi.yml
+    url: openapi/coreweave-freshdesk-api-openapi.yml
+- aid: coreweave:coreweave-healthz-api
+  name: CoreWeave Healthz API
+  description: The Healthz API from CoreWeave — 1 operation(s) for healthz.
+  humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
+  tags:
+  - Healthz
+  properties:
+  - type: OpenAPI
+    url: openapi/coreweave-healthz-api-openapi.yml
+- aid: coreweave:coreweave-reconcile-api
+  name: CoreWeave Reconcile API
+  description: The Reconcile API from CoreWeave — 1 operation(s) for reconcile.
+  humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
+  tags:
+  - Reconcile
+  properties:
+  - type: OpenAPI
+    url: openapi/coreweave-reconcile-api-openapi.yml
+- aid: coreweave:coreweave-webhooks-api
+  name: CoreWeave Webhooks API
+  description: The Webhooks API from CoreWeave — 2 operation(s) for webhooks.
+  humanURL: https://docs.coreweave.com/products/cks/reference/cks-api
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/coreweave-webhooks-api-openapi.yml
 common:
 - type: RateLimits
   url: rate-limits/coreweave-rate-limits.yml
