@@ -229,6 +229,45 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-network-edge.py
   first_seen: '2026-10-20'
+- partner_name: OpenTofu (opentofu-registry)
+  partner: opentofu
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: opentofu-registry
+  evidence: https://search.opentofu.org/provider/coreweave/coreweave
+  mirror_of: opentofu/integrations/opentofu-integration-edges.yml
+  apps:
+  - coreweave/coreweave
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (GitHub domain-verified organization)
+- partner_name: Terraform (terraform-registry)
+  partner: terraform
+  partner_match: mirror
+  mirror_match: register
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: terraform-registry
+  evidence: https://registry.terraform.io/providers/coreweave/coreweave
+  mirror_of: terraform/integrations/terraform-integration-edges.yml
+  apps:
+  - coreweave/coreweave
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (Terraform partner tier)
+  - Verified publisher (GitHub domain-verified organization)
 generated: '2026-10-13'
 method: searched
 checked:
@@ -243,6 +282,8 @@ checked:
 - https://www.peeringdb.com/api/fac
 - https://www.peeringdb.com/api/ix
 - https://www.peeringdb.com/api/net
+- opentofu/integrations/opentofu-integration-edges.yml
+- terraform/integrations/terraform-integration-edges.yml
 source:
 - https://github.com/cncf/landscape
 - https://github.com/cncf/k8s-conformance
