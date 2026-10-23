@@ -268,6 +268,94 @@ edges:
   badges:
   - Verified publisher (Terraform partner tier)
   - Verified publisher (GitHub domain-verified organization)
+- partner_name: Buf Schema Registry (BSR) public modules
+  partner: buf
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: third-party
+  evidence: https://buf.build/coreweave
+  category: Protocol Buffers schema publishing (BSR)
+  contract_reference:
+    register: Buf Schema Registry (BSR) public modules
+    spec_file: null
+    standard: Protocol Buffers
+    role: schema-publisher
+    registrations:
+    - registered_name: coreweave
+      register_status: public-modules
+      evidence_url: https://buf.build/coreweave
+      matched_domain: coreweave.com
+      matched_by: domain
+      url_source: owner-url
+    modules:
+    - module: buf.build/coreweave/arca
+      state: active
+      lapsed: false
+      created: '2026-06-17'
+    - module: buf.build/coreweave/aviato
+      state: active
+      lapsed: false
+      created: '2025-11-25'
+    - module: buf.build/coreweave/billing
+      state: active
+      lapsed: false
+      created: '2025-11-19'
+    - module: buf.build/coreweave/capacity
+      state: active
+      lapsed: false
+      created: '2026-09-08'
+    - module: buf.build/coreweave/cks
+      state: active
+      lapsed: false
+      created: '2024-12-05'
+    - module: buf.build/coreweave/container-registry-api
+      state: active
+      lapsed: false
+      created: '2026-10-06'
+    - module: buf.build/coreweave/cwobject
+      state: active
+      lapsed: false
+      created: '2025-06-04'
+    - module: buf.build/coreweave/directory
+      state: active
+      lapsed: false
+      created: '2026-10-01'
+    - module: buf.build/coreweave/inference
+      state: active
+      lapsed: false
+      created: '2026-02-10'
+    - module: buf.build/coreweave/kynes
+      state: active
+      lapsed: false
+      created: '2026-06-17'
+    - module: buf.build/coreweave/networking
+      state: active
+      lapsed: false
+      created: '2024-12-05'
+    - module: buf.build/coreweave/quotas
+      state: active
+      lapsed: false
+      created: '2025-05-16'
+    - module: buf.build/coreweave/sandbox
+      state: active
+      lapsed: false
+      created: '2026-04-03'
+    - module: buf.build/coreweave/telemetry-relay
+      state: active
+      lapsed: false
+      created: '2026-10-13'
+    - module: buf.build/coreweave/workload-federation
+      state: active
+      lapsed: false
+      created: '2026-08-19'
+    signal_note: 'participation only: the owner publishes Protocol Buffers schema modules on the public BSR; a listing
+      is not conformance (no certified_products)'
+    detected_by: sweep-buf-schema-registry.py
+    detected: '2026-10-23'
+  detected_by: sweep-buf-schema-registry.py
+  first_seen: '2026-10-23'
 generated: '2026-10-13'
 method: searched
 checked:
@@ -284,6 +372,9 @@ checked:
 - https://www.peeringdb.com/api/net
 - opentofu/integrations/opentofu-integration-edges.yml
 - terraform/integrations/terraform-integration-edges.yml
+- https://buf.build/buf.registry.module.v1.ModuleService/ListModules
+- https://buf.build/buf.registry.owner.v1.OwnerService/GetOwners
+- https://buf.build/explore
 source:
 - https://github.com/cncf/landscape
 - https://github.com/cncf/k8s-conformance
